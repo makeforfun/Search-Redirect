@@ -1,0 +1,172 @@
+<html>
+<!-- This page 'Search Redirect' is free to download, use and share. -->
+<head>
+<meta http-equiv="Content-Type" content="text/html"; charset="Windows-1252">
+<meta name="referrer" content="no-referrer">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="search redirector, redirect search">
+<meta name="description" content="Search Redirect — a free search engine redirector.">
+<title>Search Redirect</title>
+</head>
+
+<center>
+<body>
+<h1>Search Redirect </h1>
+<h2>different search engine always </h2>
+Bookmark or Set as Homepage 
+<br>(Optional) For searx, add #searx to end of this page's url. 
+
+</body>
+
+<!-- no javascript -->
+<noscript><h1>No javascript </h1><h2>page stopped </h2>This page requires JavaScript to work, <a href="https://searx.neocities.org/nojs.html">click here</a> for a non-JS version. </noscript>
+<br><br><footer>2024</footer>
+</center>
+
+<!-- css -->
+<style>
+body {background-color: WhiteSmoke;color: Black;}
+a {color: #000000;}
+</style>
+
+<!-- javascript -->
+<script type="text/javascript">
+//Load a search engine on start
+window.onload = function() {work()};
+
+var popular = [
+'search.brave.com',
+'duckduckgo.com',
+'startpage.com',
+'searchencrypt.com',
+'presearch.com',
+'results.excite.com',
+'www.webcrawler.com',
+'ecosia.org'
+];
+
+var searx = [
+//donations, to include remove tags /* */
+/* 
+'baresearch.org',
+'copp.gg',
+'etsi.me',
+'fairsuch.net',
+'search.einfachzocken.eu',
+'search.gcomm.ch',
+'search.in.projectsegfau.lt',
+'search.incogniweb.net',
+'search.leptons.xyz',
+'search.nadeko.net',
+'search.nerdvpn.de',
+'search.ngn.tf',
+'search.ononoki.org',
+'search.privacyredirect.com',
+'search.projectsegfau.lt',
+'search.us.projectsegfau.lt',
+'searx.daetalytica.io',
+'searx.lunar.icu',
+'searx.namejeff.xyz',
+'searx.oakleycord.dev',
+'searx.perennialte.ch',
+'searx.techsaviours.org',
+'sx.thatxtreme.dev',
+'www.gruble.de',
+'xo.wtf',
+*/
+
+'darmarit.org/searx',
+'freesearch.club',
+'northboot.xyz',
+'nyc1.sx.ggtyler.dev',
+'ooglester.com',
+'opnxng.com',
+'paulgo.io',
+'priv.au',
+'s.mble.dk',
+'s.trung.fun',
+'search.bus-hit.me',
+'search.charliewhiskey.net',
+'search.citw.lgbt',
+'search.darkness.services',
+'search.datura.network',
+'search.demoniak.ch',
+'search.dotone.nl',
+'search.hbubli.cc',
+'search.im-in.space',
+'search.indst.eu',
+'search.inetol.net',
+'search.ldne.xyz',
+'search.mdosch.de',
+'search.reallyaweso.me',
+'search.rhscz.eu',
+'search.rowie.at',
+'search.sapti.me',
+'search.smnz.de',
+'searx.aleteoryx.me',
+'searx.ankha.ac',
+'searx.baczek.me',
+'searx.be',
+'searx.catfluori.de',
+'searx.colbster937.dev',
+'searx.dresden.network',
+'searx.foss.family',
+'searx.hu',
+'searx.juancord.xyz',
+'searx.nobulart.com',
+'searx.ox2.fr',
+'searx.rhscz.eu',
+'searx.sev.monster',
+'searx.tuxcloud.net',
+'searx.work',
+'searx.zhenyapav.com',
+'searxng.brihx.fr',
+'searxng.ca',
+'searxng.ch',
+'searxng.cryptocalcu.top',
+'searxng.online',
+'searxng.site',
+'sex.finaltek.net',
+'skyrimhater.com',
+'sx.catgirl.cloud',
+'sxng.violets-purgatory.dev',
+'vanderwilhelm.me',
+'www.jabber-germany.de/searx'
+];
+
+function arrayShuffle(arr) {
+arr.sort(function(){return 0.5 - Math.random()});
+for (let i = arr.length -1; i > 0; i--) {
+let j = Math.floor(Math.random() * (i+1));
+let k = arr[i];
+arr[i] = arr[j];
+arr[j] = k;
+}
+return arr;
+}
+
+function pickRndInt(min, max) {return Math.floor(Math.random() * (max - min + 1) ) + min;}
+
+function getNewUrl(arr) {
+arr=arrayShuffle(arr);
+return arr[pickRndInt(0, arr.length - 1)];
+}
+
+function work() {
+//var old = Math.floor(Math.random() * domains.length);
+
+if (window.location.href.indexOf('#searx') != -1){
+navigate(getNewUrl(searx) + '/search?language=auto&safesearch=0');
+
+} else {
+//default
+navigate(getNewUrl(popular));
+}
+}
+
+function navigate(url) {
+window.location.href = 'about:blank';
+window.location.href = 'https://' + url;
+}
+</script>
+</html>
